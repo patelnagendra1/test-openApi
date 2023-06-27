@@ -21,8 +21,11 @@ jobs:
         with:
           node-version: '14'
 
+      - name: print 
+        run: echo "hello I was here "
+        
       - name: Run p2o command
-        run: p2o ./CleverTap\ API.postman_collection.json -f ./result.yml
+        run: p2o ./api.json -f ./result.yml
 
       - name: Commit and push changes
         run: |
