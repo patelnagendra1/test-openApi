@@ -2,7 +2,7 @@ const postmanToOpenApi = require('postman-to-openapi')
 
 const postmanCollection = './api.json'
 const outputFile = './result.yml'
-// commnkdbvjsdfb
+// commnkdbvjsdfbcgacva
 // Async/await
 try {
     convertPostmanToOpenApi();
