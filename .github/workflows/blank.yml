@@ -22,7 +22,7 @@ jobs:
           node-version: '14'
 
       - name: print 
-        run: echo "hello I was here "
+        run: echo pwd
         
       - name: Install p2o
         run: npm i postman-to-openapi -g
