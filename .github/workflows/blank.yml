@@ -21,8 +21,10 @@ jobs:
         with:
           node-version: '14'
 
-      - name: print 
-        run: echo pwd
+      - name: Print Working Directory
+        run: |
+          echo "Current working directory:"
+          pwd
         
       - name: Install p2o
         run: npm i postman-to-openapi -g
