@@ -30,7 +30,7 @@ jobs:
         run: npm i postman-to-openapi -g
         
       - name: Run p2o command
-        run: p2o /home/runner/work/test-openApi/test-openApi/api.json -f ./result.yml
+        run: p2o /home/runner/work/test-openApi/.github/api.json -f ./result.yml
 
       - name: Commit and push changes
         run: |
