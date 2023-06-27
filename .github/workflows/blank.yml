@@ -25,7 +25,7 @@ jobs:
         run: echo "hello I was here "
         
       - name: Install p2o
-        run: npm install -g p2o
+        run: npm i postman-to-openapi --save
         
       - name: Run p2o command
         run: p2o ./api.json -f ./result.yml
