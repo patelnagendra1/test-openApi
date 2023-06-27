@@ -24,6 +24,9 @@ jobs:
       - name: print 
         run: echo "hello I was here "
         
+      - name: Install p2o
+        run: npm install -g p2o@1.2.3
+        
       - name: Run p2o command
         run: p2o ./api.json -f ./result.yml
 
