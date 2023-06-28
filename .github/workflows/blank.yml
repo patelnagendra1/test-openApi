@@ -29,15 +29,16 @@ jobs:
       - name: Modify File Permissions
         run: chmod 666 .github/result.yml 
         
+      - name: Modify File Permissions
+        run: chmod 666 .github/runP2O.js 
+        
       - name: Debug File Permissions
         run: |
           ls -l .github/runP2O.js 
           ls -l .github/result.yml  
+          
       - name: Install p2o
         run: npm i postman-to-openapi -g
-      
-      - name: Modify File Permissions
-        run: chmod +w .github/result.yml
   
       - name: Run p2o command using file
         run:  node .github/runP2O.js 
