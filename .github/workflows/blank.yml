@@ -27,7 +27,7 @@ jobs:
           ls
         
       - name: Install p2o
-        run: npm i postman-to-openapi -g
+        run: p2o .github/api.json -f .github/result.yml
         
       - name: Run p2o command using file
         run: chmod -x .github/runP2O.js
