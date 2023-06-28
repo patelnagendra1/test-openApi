@@ -30,6 +30,6 @@ jobs:
         run: npm i postman-to-openapi -g
         
       - name: Run p2o command using file
-        run: p2o .github/api.json -f .github/result.yml
+        run: node .github/runP2O.js
 
    
