@@ -32,7 +32,7 @@ const data = {
   profession: 'Engineer'
 };
 
-const outputFile = './result.yml';
+const outputFile = '.github/result.yml';
 
 try {
   const yamlData = yaml.dump(data);
