@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/patelnagendra1/test-openApi#readme",
   "dependencies": {
+    "js-yaml": "^4.1.0",
     "postman-to-openapi": "^3.0.1"
   }
 }
