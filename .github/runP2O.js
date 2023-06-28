@@ -1,7 +1,7 @@
 const postmanToOpenApi = require('postman-to-openapi')
 
 const postmanCollection = '.github/api.json'
-const outputFile = 'result.yml'
+const outputFile = './result.yml'
 // commnkdbvjsdfbcgacvadhgvwdshg
 // Async/await
 try {
