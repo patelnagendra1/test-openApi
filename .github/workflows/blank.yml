@@ -13,10 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Working Directory
-        run: |
-          echo "Current working directory:"
-          ls
+    
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
         
       - name: Install p2o
         run: npm i postman-to-openapi -g
