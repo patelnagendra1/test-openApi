@@ -31,6 +31,6 @@ jobs:
       
         
       - name: Run p2o command using file
-        run: node .github/runP2O.js
+        run: p2o .github/runP2O.js -f .github/res.yml
 
    
