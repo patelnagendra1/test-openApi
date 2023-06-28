@@ -24,7 +24,7 @@ jobs:
       - name: Print Working Directory
         run: |
           echo "Current working directory:"
-          pwd
+          ls
         
       - name: Install p2o
         run: npm i postman-to-openapi -g
