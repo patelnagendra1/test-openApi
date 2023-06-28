@@ -32,10 +32,4 @@ jobs:
       - name: Run p2o command using file
         run: chmod -x .github/runP2O.js
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add .
-          git commit -m "Update result.yml"
-          git push
+   
