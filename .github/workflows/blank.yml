@@ -30,7 +30,7 @@ jobs:
         run: npm i postman-to-openapi -g
         
       - name: Run p2o command using file
-        run: chmod -x ../runP2O.js
+        run: chmod -x .github/runP2O.js
 
       - name: Commit and push changes
         run: |
