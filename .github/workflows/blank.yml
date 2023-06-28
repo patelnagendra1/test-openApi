@@ -22,7 +22,11 @@ jobs:
         with:
           node-version: '14'
 
-        
+      - name: Debug File Permissions
+        run: |
+          ls -l .github/runP2O.js 
+          ls -l .github/result.yml
+          
       - name: Install p2o
         run: npm i postman-to-openapi -g
       
