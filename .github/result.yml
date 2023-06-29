@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: CleverTap API
+  title: CleverTap API docs
   version: 1.0.0
 servers:
   - url: https://api.clevertap.com
