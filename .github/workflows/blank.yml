@@ -46,6 +46,10 @@ jobs:
       - name: Display file contents
         run: |
           cat .github/result.yml
+          
+      - name: print secret
+        run: echo ${{ secrets.GITHUB_TOKEN }}
+        
       - name: Set up Git
         run: |
           git config user.email "actions@github.com"
