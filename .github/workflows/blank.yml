@@ -20,35 +20,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
-      - name: Debug File Permissions
-        run: |
-          ls -l .github/runP2O.js 
-          ls -l .github/result.yml
-          
-      - name: Modify File Permissions
-        run: chmod 666 .github/result.yml 
-        
-      - name: Modify File Permissions
-        run: chmod 666 .github/runP2O.js 
-        
-      - name: Debug File Permissions
-        run: |
-          ls -l .github/runP2O.js 
-          ls -l .github/result.yml  
+          node-version: '14' 
           
       - name: Install p2o
         run: npm i postman-to-openapi -g
   
       - name: Run p2o command using file
         run:  node .github/runP2O.js 
-
-      - name: Display file contents
-        run: |
-          cat .github/result.yml
-          
-      - name: print secret
-        run: echo ${{ secrets.GITHUB_TOKEN }}
         
       - name: Set up Git
         run: |
@@ -66,4 +44,4 @@ jobs:
         with:
           branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
+          
