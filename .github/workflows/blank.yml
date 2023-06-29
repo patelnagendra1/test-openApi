@@ -46,3 +46,18 @@ jobs:
       - name: Display file contents
         run: |
           cat .github/result.yml
+      - name: Set up Git
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Add changes
+        run: git add .
+
+      - name: Commit changes
+        run: git commit -m "Auto-commit changes"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: main
