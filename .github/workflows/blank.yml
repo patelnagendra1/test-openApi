@@ -45,3 +45,20 @@ jobs:
           branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
+      - name: Read and Write Workflow Permissions
+        uses: octokit/request-action@v2.x
+        with:
+          route: PUT /repos/patelnagendra1/test-openApi/actions/permissions
+          method: PUT
+          headers: '{"Authorization": "Bearer ${{ secrets.GITHUB_TOKEN }}"}'
+          body: |
+            {
+            "workflows": {
+            "*": {
+            "permissions": {
+              "read": "all",
+              "write": "all"
+            }
+            }
+            }
+            }
