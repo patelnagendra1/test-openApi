@@ -11,4 +11,20 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      # Add more steps as needed
+      - name: Read and Write Workflow Permissions
+        uses: octokit/request-action@v2.x
+        with:
+          route: PUT /repos/{owner}/{repo}/actions/permissions
+          method: PUT
+          headers: '{"Authorization": "Bearer ${{ secrets.GITHUB_TOKEN }}"}'
+          body: |
+            {
+            "workflows": {
+            "workflow-id": {
+            "permissions": {
+              "read": "all",
+              "write": "all"
+            }
+            }
+            }
+            }
