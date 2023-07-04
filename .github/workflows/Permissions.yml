@@ -1,0 +1,14 @@
+name: Workflow Permissions
+on:
+  workflow_run:
+    workflows:
+      - 'Other Workflow Name'
+
+jobs:
+  permissions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Add more steps as needed
