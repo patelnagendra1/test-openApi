@@ -18,7 +18,7 @@ async function convertPostmanToOpenApi() {
     console.log(`OpenAPI specs: ${result}`)
 }
 // Promise callback style
-// just for change
+
 postmanToOpenApi(postmanCollection, outputFile, { defaultTag: 'General' })
     .then(result => {
         console.log(`OpenAPI specs: ${result}`)
