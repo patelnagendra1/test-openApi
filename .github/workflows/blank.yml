@@ -61,5 +61,8 @@ jobs:
         with:
           branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Ready for Review
+        uses: jinmayamashita/ready-for-review@1.0.0
+            
           
      
