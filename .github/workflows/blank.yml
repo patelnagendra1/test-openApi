@@ -13,54 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14' 
-      - name: Read and Write Workflow Permissions
-        uses: octokit/request-action@v2.x
-        with:
-          route: PUT /repos/patelnagendra1/test-openApi/actions/permissions
-          method: PUT
-          headers: '{"Authorization": "Bearer ${{ secrets.GITHUB_TOKEN }}"}'
-          body: |
-            {
-            "workflows": {
-            "*": {
-            "permissions": {
-              "read": "all",
-              "write": "all"
-            }
-            }
-            }
-            }
-
-      - name: Install p2o
-        run: npm i postman-to-openapi -g
   
-      - name: Run p2o command using file
-        run:  node .github/runP2O.js 
-        
-      - name: Set up Git
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-
-      - name: Add changes
-        run: git add .
-
-      - name: Commit changes
-        run: git commit -m "Auto-commit changes"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Ready for Review
         uses: jinmayamashita/ready-for-review@1.0.0
             
